@@ -18,7 +18,7 @@ describe :main do
       expect { main(['12:00']) }.must_raise(SystemExit)
     end
 
-    expect(out).must_match(/You must provide a valid start time and end time/)
+    expect(out).must_match(/End time is invalid/)
   end
 
   it 'should abort if end time is before start time' do

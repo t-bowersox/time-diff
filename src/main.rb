@@ -3,7 +3,7 @@
 # frozen_string_literal: true
 
 require 'time'
-require_relative 'lib/differ'
+require_relative 'lib/time_diff'
 
 def exit_with_error(error_msg)
   puts error_msg
@@ -13,7 +13,7 @@ end
 # @param [Array<String>] times An array containing two times to compare.
 def main(times)
   start_time, end_time = times.map { |time| time.downcase == 'now' ? Time.new : Time.parse(time) }
-  diff_times(start_time, end_time)
+  puts TimeDiff.new(start_time, end_time)
 rescue ArgumentError
   exit_with_error "Error: #{times.join(' and ')} are not valid times."
 rescue RuntimeError => e
