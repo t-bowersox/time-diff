@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'minitest/autorun'
-require 'time'
-require_relative '../src/main'
+require "minitest/autorun"
+require "time"
+require_relative "../src/main"
 
 describe :main do
-  it 'should abort if arguments are invalid times' do
+  it "should abort if arguments are invalid times" do
     out, = capture_io do
       expect { main(%w[foo bar]) }.must_raise(SystemExit)
     end
@@ -13,15 +13,15 @@ describe :main do
     expect(out).must_match(/foo and bar are not valid times/)
   end
 
-  it 'should abort if not enough arguments provided' do
+  it "should abort if not enough arguments provided" do
     out, = capture_io do
-      expect { main(['12:00']) }.must_raise(SystemExit)
+      expect { main(["12:00"]) }.must_raise(SystemExit)
     end
 
     expect(out).must_match(/End time is invalid/)
   end
 
-  it 'should abort if end time is before start time' do
+  it "should abort if end time is before start time" do
     out, = capture_io do
       expect { main(%w[12:00 8:00]) }.must_raise(SystemExit)
     end
@@ -41,7 +41,7 @@ describe :main do
     end
   end
 
-  it 'should output the difference between two times' do
+  it "should output the difference between two times" do
     expect { main(%w[12:00pm 2:30pm]) }.must_output(/^2 hours, 30 minutes$/)
   end
 end

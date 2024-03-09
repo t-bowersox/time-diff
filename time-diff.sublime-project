@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "Standard Ruby",
+			"env": {
+				"PATH": "~/.rbenv/shims:$PATH"
+			},
+			"shell_cmd": "standardrb --fix $file",
+			"file_patterns": ["*.rb", "Rakefile", "Gemfile*"]
+		}
+	]
+}

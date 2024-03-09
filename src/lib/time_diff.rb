@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'time'
+require "time"
 
 # One minute in seconds.
 ONE_MIN = 60
@@ -25,9 +25,9 @@ class TimeDiff
   # @param [Time] start_time
   # @param [Time] end_time
   def initialize(start_time, end_time)
-    raise 'Start time is invalid.' unless start_time.is_a? Time
-    raise 'End time is invalid.' unless end_time.is_a? Time
-    raise 'The end time must be greater than the start time.' if end_time < start_time
+    raise "Start time is invalid." unless start_time.is_a? Time
+    raise "End time is invalid." unless end_time.is_a? Time
+    raise "The end time must be greater than the start time." if end_time < start_time
 
     # @type [Time]
     @start_time = start_time
@@ -35,7 +35,7 @@ class TimeDiff
     # @type [Time]
     @end_time = end_time
 
-    @units = { year: ONE_YEAR, month: ONE_MONTH, week: ONE_WEEK, day: ONE_DAY, hour: ONE_HOUR, minute: ONE_MIN }
+    @units = {year: ONE_YEAR, month: ONE_MONTH, week: ONE_WEEK, day: ONE_DAY, hour: ONE_HOUR, minute: ONE_MIN}
   end
 
   # The time difference rounded to the nearest second.
@@ -62,9 +62,9 @@ class TimeDiff
   # Returns the time difference as a string, broken down by units of time (years, months, etc.).
   def to_s
     if value.zero?
-      'No difference.'
+      "No difference."
     else
-      to_h.map { |u, c| unit_to_s(u, c) }.join(', ')
+      to_h.map { |u, c| unit_to_s(u, c) }.join(", ")
     end
   end
 
@@ -74,6 +74,6 @@ class TimeDiff
   # @param [Symbol | String] unit
   # @param [Integer] count
   def unit_to_s(unit, count)
-    "#{count} #{unit}#{'s' if count != 1}"
+    "#{count} #{unit}#{"s" if count != 1}"
   end
 end
