@@ -2,20 +2,11 @@
 
 Returns the difference between two times.
 
-## System requirements
-
-* Ruby >= 3.3.0
-
 ## Installation
 
-To add a symlink to the `time-diff` program from your local bin:
-
 ```shell
-# From the project root directory
-./install.sh
+npm install -g @t-bowersox/time-diff
 ```
-
-You may be prompted for `sudo` permission to create the symlink.
 
 ## Usage
 
@@ -25,12 +16,10 @@ time-diff <start_time> <end_time>
 
 The program takes two arguments:
 
-* `start_time`: The starting time of the duration to measure.
-* `end_time`: The ending time of the duration to measure.
+- `start_time`: The starting time of the duration to measure.
+- `end_time`: The ending time of the duration to measure.
 
-The times provided must be date/time strings parseable by
-Ruby's [`Time::parse`](https://docs.ruby-lang.org/en/3.3/Time.html#method-c-parse) method, with the exception of a
-special `now` argument. When provided, the current time will be substituted.
+The times provided must be in a valid date/time format, with the exception of a special `now` argument. When provided, the current time will be substituted.
 
 ### Examples
 
