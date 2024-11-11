@@ -1,0 +1,27 @@
+{
+  "name": "time-diff",
+  "version": "2.0.0",
+  "description": "A program that returns the difference between two times.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-bowersox/time-diff.git"
+  },
+  "keywords": [
+    "dates",
+    "times",
+    "cli"
+  ],
+  "author": "t-bowersox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t-bowersox/time-diff/issues"
+  },
+  "homepage": "https://github.com/t-bowersox/time-diff#readme"
+}
