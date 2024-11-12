@@ -2,6 +2,10 @@
 
 Returns the difference between two times.
 
+## System requirements
+
+Node.js >= 20.18.0
+
 ## Installation
 
 ```shell

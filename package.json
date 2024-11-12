@@ -13,7 +13,8 @@
   "scripts": {
     "format": "prettier . --write",
     "lint": "eslint . --fix",
-    "test": "node --test test/"
+    "test": "node --test test/",
+    "test:watch": "node --test --watch test/"
   },
   "repository": {
     "type": "git",

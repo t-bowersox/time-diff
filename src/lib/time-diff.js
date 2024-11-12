@@ -70,7 +70,7 @@ export class TimeDiff {
   }
 
   toString() {
-    if (this.value == 0) {
+    if (this.seconds == 0) {
       return "No difference";
     }
 
@@ -81,7 +81,7 @@ export class TimeDiff {
   }
 
   /** The time difference rounded to the nearest second. */
-  get value() {
+  get seconds() {
     const diffMs = this.#endTime - this.#startTime;
     return Math.round(diffMs / 1000);
   }
@@ -118,7 +118,7 @@ export class TimeDiff {
    */
   #timeToUnits() {
     const units = {};
-    let diffSeconds = this.value;
+    let diffSeconds = this.seconds;
 
     this.#units.forEach((seconds, unit) => {
       units[unit] = 0;
