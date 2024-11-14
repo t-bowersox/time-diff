@@ -1,3 +1,5 @@
+import units from "./units.js";
+
 //#region Types
 
 /**
@@ -13,28 +15,6 @@
 
 //#endregion
 
-//#region Constants
-
-/** One minute in seconds. */
-const ONE_MIN = 60;
-
-/** One hour in seconds. */
-const ONE_HOUR = 60 * ONE_MIN;
-
-/** One day in seconds. */
-const ONE_DAY = 24 * ONE_HOUR;
-
-/** One week in seconds. */
-const ONE_WEEK = 7 * ONE_DAY;
-
-/** One month in seconds. */
-const ONE_MONTH = 4 * ONE_WEEK;
-
-/** One year in seconds. */
-const ONE_YEAR = 52 * ONE_WEEK;
-
-//#endregion
-
 //#region Classes
 
 /** Represents the difference between two times. */
@@ -47,12 +27,12 @@ export class TimeDiff {
 
   /** @type {Map<string, number>} */
   #units = new Map([
-    ["year", ONE_YEAR],
-    ["month", ONE_MONTH],
-    ["week", ONE_WEEK],
-    ["day", ONE_DAY],
-    ["hour", ONE_HOUR],
-    ["minute", ONE_MIN],
+    ["year", units.year],
+    ["month", units.month],
+    ["week", units.week],
+    ["day", units.day],
+    ["hour", units.hour],
+    ["minute", units.minute],
   ]);
 
   //#region Public API
