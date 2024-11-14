@@ -48,8 +48,8 @@ time-diff now 2099-01-01
 # => 75 years, 1 month, 1 week, 4 days, 10 hours, 56 minutes, 20 seconds
 
 time-diff foo bar
-# => Error: foo and bar are not valid times.
+# => Start time is invalid.
 
 time-diff 9:00am
-# => Error: You must provide a start time and end time.
+# => An end time is required.
 ```
