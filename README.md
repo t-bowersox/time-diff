@@ -8,6 +8,8 @@ Node.js >= 20.18.0
 
 ## Installation
 
+This package is published to GitHub Packages. If you are new to using GitHub Packages, see [Installing a Package](https://docs.github.com/en/packages/learn-github-packages/installing-a-package).
+
 ```shell
 npm install -g @t-bowersox/time-diff
 ```
