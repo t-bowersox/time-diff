@@ -1,6 +1,6 @@
 {
   "name": "@t-bowersox/time-diff",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A program that returns the difference between two times.",
   "main": "src/index.js",
   "type": "module",
