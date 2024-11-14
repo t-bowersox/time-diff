@@ -1,0 +1,43 @@
+{
+  "name": "@t-bowersox/time-diff",
+  "version": "1.0.0",
+  "description": "A program that returns the difference between two times.",
+  "main": "src/index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "time-diff": "bin/cli.js"
+  },
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "eslint . --fix",
+    "test": "node --test test/",
+    "test:watch": "node --test --watch test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-bowersox/time-diff.git"
+  },
+  "keywords": [
+    "dates",
+    "times",
+    "cli"
+  ],
+  "author": "t-bowersox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t-bowersox/time-diff/issues"
+  },
+  "homepage": "https://github.com/t-bowersox/time-diff#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
+    "prettier": "3.3.3"
+  },
+  "engines": {
+    "node": ">=20.18.0"
+  }
+}
